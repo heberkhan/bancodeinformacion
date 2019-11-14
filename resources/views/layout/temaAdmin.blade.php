@@ -26,7 +26,70 @@
 <link rel="stylesheet" type="text/css" href="temaAdmin/css/table-style.css" />
 <link rel="stylesheet" type="text/css" href="temaAdmin/css/basictable.css" />
 <script type="text/javascript" src="temaAdmin/js/jquery.basictable.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/b-1.6.0/b-colvis-1.6.0/b-flash-1.6.0/b-html5-1.6.0/b-print-1.6.0/r-2.2.3/datatables.min.css"/>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/b-1.6.0/b-colvis-1.6.0/b-flash-1.6.0/b-html5-1.6.0/b-print-1.6.0/r-2.2.3/datatables.min.js"></script>
+
+<!--
+<link rel="stylesheet" href="js/plugins/datatables/dataTables.bootstrap4.css">
+<link rel="stylesheet" href="js/plugins/datatables/buttons-bs4/buttons.bootstrap4.min.css"> -->
+
+<script src="https://kit.fontawesome.com/615ae397eb.js" crossorigin="anonymous"></script>
+
+<!-- TAGS -->
+
+<link rel="stylesheet" type="text/css" href="{{ asset('js/tags/src/jquery.tagsinput.css') }}" />
+<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js'></script>
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/start/jquery-ui.css" /> -->
+
+
+<!-- DATA TABLES -->
 <script type="text/javascript">
+$(document).ready(function() {
+  $('#mytable').DataTable( {
+      dom: 'Bfrtip',
+      buttons: [
+          'copy','excel', 'pdf'
+      ],
+
+      "language": {
+                "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copy": "Copiar",
+                    "colvis": "Visibilidad"
+                }
+              }
+  } );
+} );
+</script>
+
+<!-- <script type="text/javascript">
     $(document).ready(function() {
       $('#table').basictable();
 
@@ -52,9 +115,9 @@
         tableWrapper: true
       });
     });
-</script>
+</script> -->
 <!-- //tables -->
-
+<script type="text/javascript" src="js/charts/dist/Chart.js"></script>
 </head>
 <body>
    <div class="page-container">
@@ -154,15 +217,19 @@
 										<li><a href="{{route('home')}}"><i class="fa fa-tachometer"></i> <span>Inicio</span><div class="clearfix"></div></a>
 										</li>
 
-										<li id="menu-academico" ><a href="{{ route('listarComercios')  }}"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Comercios</span> <div class="clearfix"></div></a>
+										<li id="menu-academico" ><a href="{{ route('comercio.index')  }}"><i class="fa fa-list-alt" aria-hidden="true"></i><span> Comercios</span> <div class="clearfix"></div></a>
 
 										</li>
 
                     <li><a href="{{route('barrios.index')}}"><i class="fa fa-table"></i>  <span>Barrios</span><div class="clearfix"></div></a></li>
 
-										<li id="menu-academico" ><a href="{{route('verMensajes')}}"><i class="fa fa-envelope nav_icon"></i><span>Mensajes</span><div class="clearfix"></div></a></li>
+                    <li><a href="{{route('crudImpuestos.index')}}"><i class="fas fa-tasks"></i>  <span>Impuestos</span><div class="clearfix"></div></a></li>
+
+                    <li><a href="{{route('requisitos.index')}}"><i class="fas fa-edit"></i>  <span>Requisitos</span><div class="clearfix"></div></a></li>
 
 										<li id="menu-academico" ><a href="{{ route('reportes.index') }}"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><span>Reportes</span><div class="clearfix"></div></a></li>
+
+                    <li id="menu-academico" ><a href="{{ route('indicadores.index') }}"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Indicadores</span><div class="clearfix"></div></a></li>
 
 										@can('users.index')
 										<li id="menu-academico" ><a href="{{ route('users.index') }}"><i class="fa fa-user"></i><span>Usuarios</span><div class="clearfix"></div></a></li>
@@ -170,39 +237,6 @@
 										<li id="menu-academico" ><a href="{{route('config.index')}}"><i class="fa fa-cogs" aria-hidden="true"></i><span> Configuración</span><div class="clearfix"></div></a>
 
 										</li>
-
-									 <!-- <li id="menu-academico" ><a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span> Categorías</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
-										   <ul id="menu-academico-sub" >
-										   <li id="menu-academico-avaliacoes" ><a href="{{route('listarCategorias')}}">Listar</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="{{route('crearCategoriaView')}}">Crear</a></li>
-
-										  </ul>
-										</li>
-
-
-
-
-
-
-
-									<li><a href="maps.html"><i class="fa fa-map-marker" aria-hidden="true"></i>  <span>Maps</span><div class="clearfix"></div></a></li>
-
-							        <li id="menu-academico" ><a href="#"><i class="fa fa-file-text-o"></i>  <span>Pages</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
-										 <ul id="menu-academico-sub" >
-											<li id="menu-academico-boletim" ><a href="calendar.html">Calendar</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="signin.html">Sign In</a></li>
-											<li id="menu-academico-avaliacoes" ><a href="signup.html">Sign Up</a></li>
-
-
-										  </ul>
-									 </li>
-
-									<li><a href="#"><i class="fa fa-check-square-o nav_icon"></i><span>Forms</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
-									  <ul>
-										<li><a href="input.html"> Input</a></li>
-										<li><a href="validation.html">Validation</a></li>
-									</ul>
-									</li> -->
 								  </ul>
 								</div>
 								<!--copy rights start here-->
@@ -261,5 +295,22 @@
 
 	});
 	</script>
+
+  <script src="js/tags/src/jquery.tagsinput.js" type="text/javascript"></script>
+    <script >
+      $('#tags').tagsInput();
+    </script>
+
+
+  <!-- <script src="js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="js/plugins/datatables/buttons/dataTables.buttons.min.js"></script>
+  <script src="js/plugins/datatables/buttons/buttons.print.min.js"></script>
+  <script src="js/plugins/datatables/buttons/buttons.html5.min.js"></script>
+  <script src="js/plugins/datatables/buttons/buttons.flash.min.js"></script>
+  <script src="js/plugins/datatables/buttons/buttons.colVis.min.js"></script> -->
+
+  <!-- Page JS Code -->
+  <!-- <script src="js/pages/be_tables_datatables.min.js"></script> -->
 </body>
 </html>

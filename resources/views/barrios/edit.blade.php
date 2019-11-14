@@ -35,42 +35,42 @@
 
                         <form action="{{ route('barrios.update') }}" enctype="multipart/form-data" method="get" name="form1" id="form1">
                             {!! csrf_field() !!}
-                            
-                            
-                            <div class="vali-form">    
+
+
+                            <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">Nombre del barrio</label>
-                                    <input type="text" placeholder="Nombre del barrio" name="name" value="{{ $barrio->name }}">
-                                 </div>   
-                               
-                            
+                                    <input type="text" placeholder="Nombre del barrio" name="name" value="{{ $barrio->name }}" required>
+                                 </div>
+
+
                                 <div class="col-md-6 form-group1 form-last">
                                     <label class="control-label">Zona</label>
-                                    <input type="text" placeholder="Zona" name="zona" value="{{ $barrio->zona }}">
-                                 </div>   
-                                 
+                                    <input type="text" placeholder="Zona" name="zona" value="{{ $barrio->zona }}" required>
+                                 </div>
+
                             </div>
-                       
-                           
-                            
+
+
+
 
                             <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">UPZ</label>
-                                    <input type="text" placeholder="UPZ" name="upz" value="{{ $barrio->upz }}">
+                                    <input type="text" placeholder="UPZ" name="upz" value="{{ $barrio->upz }}" required>
                                 </div>
-                                
+
                                 <div class="clearfix"> </div>
                             </div>
-                            
 
-                           
+
+
                             <input type="hidden" name="id" value="{{ $barrio->id }}">
-                           
-                            
+
+
                             <div class="col-md-12 form-group">
                                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                                <button type="reset" class="btn btn-default">Cancelar</button>
+                                <a href="{{route('barrios.index')}}" class="btn btn-default">Volver</a>
                             </div>
                             <div class="clearfix"> </div>
                         </form>

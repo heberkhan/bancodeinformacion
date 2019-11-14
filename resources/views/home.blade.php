@@ -26,7 +26,7 @@
 
 </header>
 <div class="agileits-box-body clearfix">
-    <h5>¡HAGAMOS MAGIA HOY!</h5>
+    <img src="images/identidad/logo_bdi.png" alt="" style="width:100%; height:auto"/>
 </div>
 </div>
 </div>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="four-text">
                                 <h3>Usuarios</h3>
-                                <h4>  </h4>
+                                <h4> {{$users}} </h4>
 
                             </div>
 
@@ -56,7 +56,7 @@
                             </div>
                             <div class="four-text">
                                 <h3>Comercios</h3>
-                                <h4></h4>
+                                <h4> {{$comercios}}</h4>
 
                             </div>
 
@@ -68,8 +68,8 @@
                                 <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
                             </div>
                             <div class="four-text">
-                                <h3>Mensajes</h3>
-                                <h4></h4>
+                                <h3>Impuestos</h3>
+                                <h4>{{$imp}}</h4>
 
                             </div>
 
@@ -81,8 +81,8 @@
                                 <i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i>
                             </div>
                             <div class="four-text">
-                                <h3>Reportes</h3>
-                                <h4></h4>
+                                <h3>Requisitos</h3>
+                                <h4>{{$req}}</h4>
 
                             </div>
 

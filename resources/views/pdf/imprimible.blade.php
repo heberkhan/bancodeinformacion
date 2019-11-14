@@ -2,8 +2,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-     
+        <link href="http://localhost:8000/css/bootstrap.css" rel='stylesheet' type='text/css' />
+
 
         <title>Imprimible</title>
 
@@ -12,7 +12,7 @@
         <div class="grids">
 				<!--grids-->
 				<div class="row">
-									
+
 								<div class="col-md-3">
 									<div >
 										<h3>{{ $comercio->nombre }}</h3>
@@ -23,25 +23,25 @@
 										<p><strong>Email: </strong>{{ $comercio->email }}</p>
 										<p>
 											<strong>Horario:</strong>
-										
+
 
 											@if($comercio->lunes==1)
-											Lunes, 
+											Lunes,
 											@endif
 											@if($comercio->martes==1)
-											Martes, 
+											Martes,
 											@endif
 											@if($comercio->miercoles==1)
-											Miércoles, 
+											Miércoles,
 											@endif
 											@if($comercio->jueves==1)
-											Jueves, 
+											Jueves,
 											@endif
 											@if($comercio->viernes==1)
-											Viernes, 
+											Viernes,
 											@endif
 											@if($comercio->sabado==1)
-											Sábado, 
+											Sábado,
 											@endif
 											@if($comercio->domingo==1)
 											Domingo.
@@ -52,101 +52,101 @@
 										<label>Al día</label>
 										<p>
 											@if($comercio->rut=='Si')
-												RUT, 		
+												RUT,
 											@endif
 											@if($comercio->camaraComercio=='Si')
-												Cámara de Comercio, 		
+												Cámara de Comercio,
 											@endif
 											@if($comercio->rtiyc=='Si')
-												Registro Industria y Comercio, 		
+												Registro Industria y Comercio,
 											@endif
 											@if($comercio->usoSuelos=='Si')
-												Uso del suelo, 		
+												Uso del suelo,
 											@endif
 											@if($comercio->diiyc=='Si')
-												Declaración de Industria y Comercio, 		
+												Declaración de Industria y Comercio,
 											@endif
 											@if($comercio->saycoAcinpro=='Si')
-												Sayco y Acinpro, 		
+												Sayco y Acinpro,
 											@endif
 											@if($comercio->sanidad=='Si')
-												Sanidad, 		
+												Sanidad,
 											@endif
 											@if($comercio->manejoAlimentos=='Si')
-												Manipulación de Alimentos, 		
+												Manipulación de Alimentos,
 											@endif
 											@if($comercio->bomberos=='Si')
-												Bomberos, 		
+												Bomberos,
 											@endif
 										</p>
 										<label>Pendiente: </label>
 										<p>
 											@if($comercio->rut=='No')
-												RUT, 		
+												RUT,
 											@endif
 											@if($comercio->camaraComercio=='No')
-												Cámara de Comercio, 		
+												Cámara de Comercio,
 											@endif
 											@if($comercio->rtiyc=='No')
-												Registro Industria y Comercio, 		
+												Registro Industria y Comercio,
 											@endif
 											@if($comercio->usoSuelos=='No')
-												Uso del suelo, 		
+												Uso del suelo,
 											@endif
 											@if($comercio->diiyc=='No')
-												Declaración de Industria y Comercio, 		
+												Declaración de Industria y Comercio,
 											@endif
 											@if($comercio->saycoAcinpro=='No')
-												Sayco y Acinpro, 		
+												Sayco y Acinpro,
 											@endif
 											@if($comercio->sanidad=='No')
-												Sanidad, 		
+												Sanidad,
 											@endif
 											@if($comercio->manejoAlimentos=='No')
-												Manipulación de Alimentos, 		
+												Manipulación de Alimentos,
 											@endif
 											@if($comercio->bomberos=='No')
-												Bomberos, 		
+												Bomberos,
 											@endif
 										</p>
 										<label>No Aplica:</label>
 										<p>
 											@if($comercio->rut=='NA')
-												RUT, 		
+												RUT,
 											@endif
 											@if($comercio->camaraComercio=='NA')
-												Cámara de Comercio, 		
+												Cámara de Comercio,
 											@endif
 											@if($comercio->rtiyc=='NA')
-												Registro Industria y Comercio, 		
+												Registro Industria y Comercio,
 											@endif
 											@if($comercio->usoSuelos=='NA')
-												Uso del suelo, 		
+												Uso del suelo,
 											@endif
 											@if($comercio->diiyc=='NA')
-												Declaración de Industria y Comercio, 		
+												Declaración de Industria y Comercio,
 											@endif
 											@if($comercio->saycoAcinpro=='NA')
-												Sayco y Acinpro, 		
+												Sayco y Acinpro,
 											@endif
 											@if($comercio->sanidad=='NA')
-												Sanidad, 		
+												Sanidad,
 											@endif
 											@if($comercio->manejoAlimentos=='NA')
-												Manipulación de Alimentos, 		
+												Manipulación de Alimentos,
 											@endif
 											@if($comercio->bomberos=='NA')
-												Bomberos, 		
+												Bomberos,
 											@endif
 										</p>
 										<h4>Redes Sociales: </h4>
 										<p>
 											@if($comercio->facebook!=null)
 											<img src="images/facebook.png" style="width: 15px; height: 15px;">
-											{{ $comercio->facebook }} 
+											{{ $comercio->facebook }}
 											@endif
 										</p>
-										<p>	
+										<p>
 											@if($comercio->twitter!=null)
 											<img src="images/twitter.jpg" style="width: 15px; height: 15px;">
 											{{ $comercio->twitter }}
@@ -159,38 +159,36 @@
 											{{ $comercio->instagram }}
 											@endif
 										</p>
-										<p>	
+										<p>
 											@if($comercio->url!=null)
 											<img src="images/web.png" style="width: 15px; height: 15px;">
 											{{ $comercio->url }}
 											@endif
 										</p>
-										
-											
-											
-											
-										
+
+
+
+
+
 									</div>
-								</div>	
-									
-									
-								
-				
+								</div>
+
+
+
+
 					<div class="col-md-3">
 						<img src="qrcodes/{{$comercio->qr}}">
 						<p>Escanéame para ver en la web</p>
 					</div>
 				</div>
 
-								
-								
-			
-					
-					
+
+
+
+
+
 </div>
-                	
-                
+
+
     </body>
 </html>
-
-		

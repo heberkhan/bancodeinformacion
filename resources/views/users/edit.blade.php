@@ -35,24 +35,24 @@
 
                         <form action="{{ route('users.update') }}" enctype="multipart/form-data" method="POST" name="form1" id="form1">
                             {!! csrf_field() !!}
-                            
-                            
-                            <div class="vali-form">    
+
+
+                            <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">Nombre de usuario</label>
                                     <input type="text" placeholder="Nombre de Usuario" name="name" value="{{ $user->name }}">
-                                 </div>   
-                               
-                            
+                                 </div>
+
+
                                 <div class="col-md-6 form-group1 form-last">
                                     <label class="control-label">Contraseña</label>
                                     <input type="password" placeholder="Contraseña" name="pwd" >
-                                 </div>   
-                                 
+                                 </div>
+
                             </div>
-                       
-                           
-                            
+
+
+
 
                             <div class="vali-form">
                                 <div class="col-md-6 form-group1">
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            
+
                             <div class="vali-form">
                                 <label for="checkbox" class="col-sm-12 control-label">Roles</label>
                                 <div class="clearfix"> </div>
@@ -78,13 +78,13 @@
                                     </div>
                                     <div class="clearfix"> </div>
                             </div>
-                           
+
 
                            <input type="hidden" name="id" value="{{ $user->id }}">
-                            
+
                             <div class="col-md-12 form-group">
                                 <button type="submit" class="btn btn-primary">Actualizar</button>
-                                
+
                             </div>
                             <div class="clearfix"> </div>
                         </form>

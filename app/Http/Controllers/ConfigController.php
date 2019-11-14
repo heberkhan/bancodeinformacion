@@ -24,7 +24,7 @@ class ConfigController extends Controller
         $imagenOriginal = $request->file('logo2');
         $imagen = Image::make($imagenOriginal);
         $temp_name = 'logo2'. '.'. $imagenOriginal->getClientOriginalExtension();
-        $imagen->resize(74,60);
+        
         $imagen->save($ruta.$temp_name, 100);
         Storage::disk('public')->put($temp_name, file_get_contents($imagenOriginal->getRealPath() ) );
       }

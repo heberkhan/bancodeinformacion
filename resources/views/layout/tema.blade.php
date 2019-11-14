@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-<title>Banco de Datos Industria y Comercio</title>
+<title>Banco de Datos Industria y Comercio | Castilla la Nueva</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<meta name="description" content=" Establecimientos de Castilla la Nueva">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -16,6 +16,11 @@
 <link href="css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome icons -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- FONT AWESOME ICONS -->
+
+<script src="https://kit.fontawesome.com/615ae397eb.js" crossorigin="anonymous"></script>
+
  <!-- js-->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/modernizr.custom.js"></script>
@@ -37,13 +42,15 @@
 <link href="css/demo-page.css" rel="stylesheet" media="all">
 <link href="css/hover.css" rel="stylesheet" media="all">
 <!-- //DROPDOWN -->
-<script src="js/dropdown.js"></script>
+<!-- <script src="js/dropdown.js"></script> -->
 <!-- maps -->
 <link href="css/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
 <!-- //maps -->
- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=directions&key=AIzaSyCPsXjjweJyVBZHNSN1b6uW594vBYMy8EQ"></script>
+ <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script> -->
 		<script type="text/javascript" src="js/gmaps.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/examples.css" />
+
 
 
 </head>
@@ -51,7 +58,7 @@
 	<div class="main-content">
 		<!--left-fixed -navigation-->
 		<div class="sidebar" role="navigation">
-            <div class="navbar-collapse">
+      <div class="navbar-collapse">
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right dev-page-sidebar mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" id="cbp-spmenu-s1">
 					<div class="scrollbar scrollbar1">
 						<ul class="nav" id="side-menu">
@@ -63,130 +70,130 @@
 								<ul class="nav nav-second-level collapse">
 
 									<li>
-										<a href="{{ route('mostrarComercio', ['categoria'=> 'Restaurantes'])}}">Restaurantes</a>
+										<a href="{{ route('mostrarComercio', 'Restaurantes')}}">Restaurantes</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Ferreterias'])}}">Ferreterias</a>
+										<a href="{{ route('mostrarComercio', 'Ferreterias')}}">Ferreterias</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Droguerias'])}}">Droguerías</a>
+										<a href="{{ route('mostrarComercio', 'Droguerias')}}">Droguerías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Casas de Cambio'])}}">Casas de Cambio</a>
+										<a href="{{ route('mostrarComercio',  'Casas de Cambio')}}">Casas de Cambio</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Agencias de Viaje'])}}">Agencias de Viaje</a>
+										<a href="{{ route('mostrarComercio', 'Agencias de Viaje')}}">Agencias de Viaje</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Moteles'])}}">Moteles</a>
+										<a href="{{ route('mostrarComercio', 'Moteles')}}">Moteles</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Floristerias'])}}">Floristerías</a>
+										<a href="{{ route('mostrarComercio', 'Floristerias')}}">Floristerías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Inmobiliarias'])}}">Inmobiliarias</a>
+										<a href="{{ route('mostrarComercio', 'Inmobiliarias')}}">Inmobiliarias</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Disfraces'])}}">Disfraces</a>
+										<a href="{{ route('mostrarComercio', 'Disfraces')}}">Disfraces</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Librerias'])}}">Librerías</a>
+										<a href="{{ route('mostrarComercio', 'Librerias')}}">Librerías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Telefonos'])}}">Teléfonos</a>
+										<a href="{{ route('mostrarComercio', 'Telefonos')}}">Teléfonos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Papelerias'])}}">Papelerías</a>
+										<a href="{{ route('mostrarComercio', 'Papelerias')}}">Papelerías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Cades, Supercades y Rapicades'])}}">Cades, Supercades y Rapicades</a>
+										<a href="{{ route('mostrarComercio', 'Cades, Supercades y Rapicades')}}">Cades, Supercades y Rapicades</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Peluquerias'])}}">Peluquerías</a>
+										<a href="{{ route('mostrarComercio', 'Peluquerias')}}">Peluquerías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Tiendas Naturistas'])}}">Tiendas Naturistas</a>
+										<a href="{{ route('mostrarComercio', 'Tiendas Naturistas')}}">Tiendas Naturistas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Restaurante a Domicilio'])}}">Restaurante a Domicilio</a>
+										<a href="{{ route('mostrarComercio', 'Restaurante a Domicilio')}}">Restaurante a Domicilio</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Centro de Belleza y Estetica'])}}">Centro de Belleza y Estética</a>
+										<a href="{{ route('mostrarComercio', 'Centro de Belleza y Estetica')}}">Centro de Belleza y Estética</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Supermercados'])}}">Supermercados</a>
+										<a href="{{ route('mostrarComercio','Supermercados')}}">Supermercados</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Opticas'])}}">Ópticas</a>
+										<a href="{{ route('mostrarComercio', 'Opticas')}}">Ópticas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Vidrios'])}}">Vidrios</a>
+										<a href="{{ route('mostrarComercio', 'Vidrios')}}">Vidrios</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Productos Quimicos'])}}">Productos Químicos</a>
+										<a href="{{ route('mostrarComercio', 'Productos Quimicos')}}">Productos Químicos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Repuestos para Motocicletas'])}}">Repuestos para Motocicletas</a>
+										<a href="{{ route('mostrarComercio', 'Repuestos para Motocicletas')}}">Repuestos para Motocicletas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Fundaciones'])}}">Fundaciones</a>
+										<a href="{{ route('mostrarComercio', 'Fundaciones')}}">Fundaciones</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Materiales Electricos'])}}">Materiales Eléctricos</a>
+										<a href="{{ route('mostrarComercio', 'Materiales Electricos')}}">Materiales Eléctricos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Panaderias'])}}">Panaderías</a>
+										<a href="{{ route('mostrarComercio', 'Panaderias')}}">Panaderías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Bicicletas'])}}">Bicicletas</a>
+										<a href="{{ route('mostrarComercio', 'Bicicletas')}}">Bicicletas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Agencia de Publicidad'])}}">Agencia de Publicidad</a>
+										<a href="{{ route('mostrarComercio', 'Agencias de publicidad')}}">Agencias de Publicidad</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Instrumentos Musicales'])}}">Instrumentos Musicales</a>
+										<a href="{{ route('mostrarComercio', 'Instrumentos Musicales')}}">Instrumentos Musicales</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Pasteleria'])}}">Pastelería</a>
+										<a href="{{ route('mostrarComercio', 'Pasteleria')}}">Pastelería</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Maderas'])}}">Maderas</a>
+										<a href="{{ route('mostrarComercio', 'Maderas')}}">Maderas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Constructoras'])}}">Constructoras</a>
+										<a href="{{ route('mostrarComercio', 'Constructoras')}}">Constructoras</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Llantas'])}}">Llantas</a>
+										<a href="{{ route('mostrarComercio', 'Llantas')}}">Llantas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Dotaciones para empresa'])}}">Dotaciones para empresa</a>
+										<a href="{{ route('mostrarComercio', 'Dotaciones para empresa')}}">Dotaciones para empresa</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Comida Rapida'])}}">Comida Rápida</a>
+										<a href="{{ route('mostrarComercio', 'Comida Rapida')}}">Comida Rápida</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Viveros'])}}">Viveros</a>
+										<a href="{{ route('mostrarComercio', 'Viveros')}}">Viveros</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Asaderos'])}}">Asaderos</a>
+										<a href="{{ route('mostrarComercio', 'Asaderos')}}">Asaderos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Articulos Ortopedicos'])}}">Artículos Ortopédicos</a>
+										<a href="{{ route('mostrarComercio', 'Articulos Ortopedicos')}}">Artículos Ortopédicos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Articulos para Adultos'])}}">Artículos para Adultos ( ͡° ͜ʖ ͡°)</a>
+										<a href="{{ route('mostrarComercio', 'Articulos para Adultos')}}">Artículos para Adultos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Reciclaje'])}}">Reciclaje</a>
+										<a href="{{ route('mostrarComercio', 'Reciclaje')}}">Reciclaje</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Estampados'])}}">Estampados</a>
+										<a href="{{ route('mostrarComercio', 'Estampados')}}">Estampados</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Radiodifusoras'])}}">Radiodifusoras</a>
+										<a href="{{ route('mostrarComercio', 'Radiodifusoras')}}">Radiodifusoras</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Farmacias'])}}">Farmacias</a>
+										<a href="{{ route('mostrarComercio', 'Farmacias')}}">Farmacias</a>
 									</li>
 
 
@@ -201,7 +208,7 @@
 								<a href="#"><i class="fa fa-list-ul nav_icon"></i>Financieros <span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level collapse">
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Bancos'])}}">Bancos</a>
+										<a href="{{ route('mostrarComercio', 'Bancos')}}">Bancos</a>
 									</li>
 
 								</ul>
@@ -216,22 +223,22 @@
 								<a href="#"><i class="fa fa-list-ul nav_icon"></i>Industrial<span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level collapse">
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Plasticos'])}}">Plásticos</a>
+										<a href="{{ route('mostrarComercio', 'Plasticos')}}">Plásticos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Telas'])}}">Telas</a>
+										<a href="{{ route('mostrarComercio', 'Telas')}}">Telas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Repuestos Automotrices'])}}">Repuestos Automotrices</a>
+										<a href="{{ route('mostrarComercio', 'Repuestos Automotrices')}}">Repuestos Automotrices</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Confecciones'])}}">Confecciones</a>
+										<a href="{{ route('mostrarComercio', 'Confecciones')}}">Confecciones</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Uniformes'])}}">Uniformes</a>
+										<a href="{{ route('mostrarComercio', 'Uniformes')}}">Uniformes</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Aire Acondicionado'])}}">Aire Acondicionado</a>
+										<a href="{{ route('mostrarComercio', 'Aire Acondicionado')}}">Aire Acondicionado</a>
 									</li>
 								</ul>
 								<!-- //nav-second-level -->
@@ -245,118 +252,118 @@
 								<a href="#"><i class="fa fa-list-ul nav_icon"></i>Servicios<span class="fa arrow"></span></a>
 								<ul class="nav nav-second-level collapse">
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Hoteles'])}}">Hoteles</a>
+										<a href="{{ route('mostrarComercio', 'Hoteles')}}">Hoteles</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Transporte Terrestre de Pasajeros'])}}">Transporte Terrestre de Pasajeros</a>
+										<a href="{{ route('mostrarComercio', 'Transporte Terrestre de Pasajeros')}}">Transporte Terrestre de Pasajeros</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Fondo de Pensiones y Cesantias'])}}">Fondo de Pensiones y Cesantías</a>
+										<a href="{{ route('mostrarComercio', 'Fondo de Pensiones y Cesantias')}}">Fondo de Pensiones y Cesantías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Clinicas Veterinarias'])}}">Clínicas Veterinarias</a>
+										<a href="{{ route('mostrarComercio','Clinicas Veterinarias')}}">Clínicas Veterinarias</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Taxis'])}}">Taxis</a>
+										<a href="{{ route('mostrarComercio', 'Taxis')}}">Taxis</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Agencias de Empleo'])}}">Agencias de Empleo</a>
+										<a href="{{ route('mostrarComercio', 'Agencias de Empleo')}}">Agencias de Empleo</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Laboratorio Clinico'])}}">Laboratorio Clínico</a>
+										<a href="{{ route('mostrarComercio', 'Laboratorio Clinico')}}">Laboratorio Clínico</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Notarias'])}}">Notarías</a>
+										<a href="{{ route('mostrarComercio', 'Notarias')}}">Notarías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Salones para Recepciones'])}}">Salones para Recepciones</a>
+										<a href="{{ route('mostrarComercio', 'Salones para Recepciones')}}">Salones para Recepciones</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Clinicas'])}}">Clínicas</a>
+										<a href="{{ route('mostrarComercio', 'Clinicas')}}">Clínicas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Iglesias y Parroquias Catolicas'])}}">Iglesias y Parroquias Católicas</a>
+										<a href="{{ route('mostrarComercio', 'Iglesias y Parroquias Catolicas')}}">Iglesias y Parroquias Católicas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Iglesias'])}}">Iglesias</a>
+										<a href="{{ route('mostrarComercio', 'Iglesias')}}">Iglesias</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Centros de Rehabilitacion'])}}">Centros de Rehabilitación</a>
+										<a href="{{ route('mostrarComercio', 'Centros de Rehabilitacion')}}">Centros de Rehabilitación</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Empleados Temporales'])}}">Empleados Temporales</a>
+										<a href="{{ route('mostrarComercio', 'Empleados Temporales')}}">Empleados Temporales</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Ecografias'])}}">Ecografías</a>
+										<a href="{{ route('mostrarComercio','Ecografias')}}">Ecografías</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Abogados'])}}">Abogados</a>
+										<a href="{{ route('mostrarComercio', 'Abogados')}}">Abogados</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Terminales de Transporte Terrestre'])}}">Terminales de Transporte Terrestre</a>
+										<a href="{{ route('mostrarComercio', 'Terminales de Transporte Terrestre')}}">Terminales de Transporte Terrestre</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Cooperativas'])}}">Cooperativas</a>
+										<a href="{{ route('mostrarComercio', 'Cooperativas')}}">Cooperativas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Salud Ocupacional'])}}">Salud Ocupacional</a>
+										<a href="{{ route('mostrarComercio', 'Salud Ocupacional')}}">Salud Ocupacional</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Laboratorios Farmaceuticos'])}}">Laboratorios Farmacéuticos</a>
+										<a href="{{ route('mostrarComercio', 'Laboratorios Farmaceuticos')}}">Laboratorios Farmacéuticos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Mariachis'])}}">Mariachis</a>
+										<a href="{{ route('mostrarComercio', 'Mariachis')}}">Mariachis</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Clinicas Odontologicas'])}}">Clínicas Odontológicas</a>
+										<a href="{{ route('mostrarComercio', 'Clinicas Odontologicas')}}">Clínicas Odontológicas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Alquiler de Lavadoras'])}}">Alquiler de Lavadoras</a>
+										<a href="{{ route('mostrarComercio', 'Alquiler de Lavadoras')}}">Alquiler de Lavadoras</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Alquiler de Ropa'])}}">Alquiler de Ropa</a>
+										<a href="{{ route('mostrarComercio', 'Alquiler de Ropa')}}">Alquiler de Ropa</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Transporte Puerta a Puerta'])}}">Transporte Puerta a Puerta</a>
+										<a href="{{ route('mostrarComercio', 'Transporte Puerta a Puerta')}}">Transporte Puerta a Puerta</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Centros Medicos'])}}">Centros Médicos</a>
+										<a href="{{ route('mostrarComercio', 'Centros Medicos')}}">Centros Médicos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Spa'])}}">Spa</a>
+										<a href="{{ route('mostrarComercio', 'Spa')}}">Spa</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Hospitales'])}}">Hospitales</a>
+										<a href="{{ route('mostrarComercio', 'Hospitales')}}">Hospitales</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Trasteos'])}}">Trasteos</a>
+										<a href="{{ route('mostrarComercio', 'Trasteos')}}">Trasteos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Estaciones de Policia'])}}">Estaciones de Policía</a>
+										<a href="{{ route('mostrarComercio', 'Estaciones de Policia')}}">Estaciones de Policía</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Transporte Terrestre de Carga'])}}">Transporte Terrestre de Carga</a>
+										<a href="{{ route('mostrarComercio', 'Transporte Terrestre de Carga')}}">Transporte Terrestre de Carga</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Transporte Especial de Pasajeros'])}}">Transporte Especial de Pasajeros</a>
+										<a href="{{ route('mostrarComercio', 'Transporte Especial de Pasajeros')}}">Transporte Especial de Pasajeros</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Hogares Geriatricos'])}}">Hogares Geriátricos</a>
+										<a href="{{ route('mostrarComercio', 'Hogares Geriatricos')}}">Hogares Geriátricos</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Comisarias de Familia'])}}">Comisarías de Familia</a>
+										<a href="{{ route('mostrarComercio', 'Comisarias de Familia')}}">Comisarías de Familia</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Caja de Compensacion Familiar'])}}">Caja de Compensación Familiar</a>
+										<a href="{{ route('mostrarComercio', 'Caja de Compensacion Familiar')}}">Caja de Compensación Familiar</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Iglesias Cristianas'])}}">Iglesias Cristianas</a>
+										<a href="{{ route('mostrarComercio', 'Iglesias Cristianas')}}">Iglesias Cristianas</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Guarderias Infantiles'])}}">Guarderías Infantiles</a>
+										<a href="{{ route('mostrarComercio', 'Guarderias Infantiles')}}">Guarderías Infantiles</a>
 									</li>
 									<li>
-										<a href="{{ route('mostrarComercio', ['actComercial'=> 'Servicios de Formación'])}}">Servicios de Formación</a>
+										<a href="{{ route('mostrarComercio', 'Servicios de Formación')}}">Servicios de Formación</a>
 									</li>
 								</ul>
 								<!-- //nav-second-level -->
@@ -366,10 +373,14 @@
 							<!-- OTROS -->
 							<li>
 
-								<a href="{{ route('mostrarComercio', ['actComercial'=> 'Otros'])}}" class="chart-nav"><i class="fa fa-list-ul nav_icon"></i>Otros<span class="fa arrow"></span></a>
+								<a href="{{ route('mostrarComercio', 'Otros')}}" class="chart-nav"><i class="fa fa-list-ul nav_icon"></i>Otros<span class="fa arrow"></span></a>
 							</li>
 							<!-- FIN OTROS -->
+							<!-- AYUDA -->
+							<li>
 
+								<a href="{{ route('ayuda')}}" class="chart-nav"><i class="far fa-question-circle nav_icon"></i>Ayuda</a>
+							</li>
 						</ul>
 					</div>
 					<!-- //sidebar-collapse -->
@@ -384,11 +395,12 @@
 				<div class="logo">
 					<a href="{{route('inicio')}}">
 						<ul>
-							<li><img src="images/identidad/logo1.jpg" alt="" /></li>
-							<li><img src="images/identidad/logo2.png" alt="" /></li>
-							<li><h1>Banco de Información</h1>
+
+							<li><img src="images/identidad/castilla.png" alt="" style="width:80px; height:65px"/></li>
+							<li><img src="images/identidad/logo_bdi.png" alt="" style="width:300px; height:65px"/></li>
+							<!-- <li><h1>Banco de Información</h1>
 									<h4>Alcaldía de Castilla</h4>
-							</li>
+							</li> -->
 
 							<div class="clearfix"> </div>
 						</ul>
@@ -405,7 +417,9 @@
 			<!--search-box-->
 				<div class="search-box">
 
-					<form class="input" method="GET" action="{{route('buscador')}}">
+					<form class="input" method="post" action="{{route('buscador')}}">
+						{!! csrf_field() !!}
+						<label for="input-31" style="display: none">Buscar</label>
 						<input class="sb-search-input input__field--madoka" placeholder="Buscar..." type="search" id="input-31" name="buscar" />
 					</form>
 				</div>
@@ -429,7 +443,7 @@
 				<!--notification menu end -->
 
 				<!--toggle button start-->
-				<button id="showLeftPush"><i class="fa fa-bars"></i></button>
+				<button id="showLeftPush"><i class="fa fa-bars"></i> </button>
 				<!--toggle button end-->
 				<div class="clearfix"> </div>
 			</div>
@@ -471,87 +485,6 @@
 							<a href="#" class="dev-page-footer-container-layer-button"></a>
 						</div>
 						<!-- //loader and close button -->
-
-						<!-- informers -->
-						<div class="dev-page-footer-container-content" id="footer_content_1">
-							<div class="block-hdnews">
-								  <div class="list-wrpaaer" style="height:200px;">
-									 <ul class="list-aggregate" id="marquee-horizontal">
-									   <li class="fat-l" style="width:300px">
-										<a href="#">Contacto</a>
-										<p>
-										   Dirección: Calle 1 No 2-3
-										   Teléfonos: 5555555 - 5555555
-										   email: email@email.com
-										 </p>
-									   </li>
-
-									   <li class="fat-l" style="width:300px">
-										<a href="#">Consectetur</a>
-										<p>
-										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										 </p>
-									   </li>
-
-									   <li class="fat-l" style="width:300px">
-										 <a href="#">Adipiscing elit</a>
-										 <p>
-										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										 </p>
-									   </li>
-
-									   <li class="fat-l" style="width:300px">
-										<a href="#">Lorem ipsum dolor</a>
-										 <p>
-										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										 </p>
-									   </li>
-										<li class="fat-l" style="width:300px">
-										<a href="#">Consectetur</a>
-										 <p>
-										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										 </p>
-									   </li>
-
-									   <li class="fat-l" style="width:300px">
-										 <a href="#">Adipiscing elit</a>
-										 <p>
-										   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-										 </p>
-									   </li>
-
-									 </ul>
-								  </div><!-- list-wrpaaer -->
-
-							  </div> <!-- block-hdnews -->
-
-						<script type="text/javascript">
-
-						  $(function(){
-
-
-						  $('#marquee-vertical').marquee();
-						  $('#marquee-horizontal').marquee({direction:'horizontal', delay:0, timing:50});
-
-						});
-
-						</script>
-						</div>
-						<!-- //informers -->
-
-
-
-
 					</div>
                 </div>
 				<!-- //container -->

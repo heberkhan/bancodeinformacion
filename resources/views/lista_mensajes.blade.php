@@ -7,11 +7,11 @@
             </ol>
 <div class="inbox-mail">
 	<div class="col-md-4 compose w3layouts">
-		
+
             <h2>Mensajería</h2>
     	<nav class="nav-sidebar">
 		<ul class="nav tabs">
-          <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="true"><i class="fa fa-inbox"></i>PQR Comercios 
+          <li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="true"><i class="fa fa-inbox"></i>PQR Comercios
           	@if($nuevosPQR !=0)
           	<span>{{ $nuevosPQR }}</span>
           	@endif
@@ -21,30 +21,28 @@
 			<span>{{ $nuevosCont }}</span>
 			@endif
           </a>
-          	
+
           </li>
-                                        
+
 		</ul>
 	</nav>
-		
+
 </div>
 <!-- tab content -->
 <div class="col-md-8 tab-content tab-content-in w3">
 <div class="tab-pane text-style active" id="tab1">
   <div class="inbox-right">
-         	
+
             <div class="mailbox-content">
 
                 <table class="table">
-                	@if($nuevosPQR == 0)
-                    	<h2>No hay mensajes</h2>
-                  @else
+
                     	<h1>PQR Comercios</h1>
                     <tbody>
-                    	
+
                     	@foreach($mensajes as $mensaje)
                         <tr class="table-row">
-                           
+
                             <td class="table-text">
                             	<h6> {{ $mensaje->nombrePQR }}</h6>
                                 <p>{{ $mensaje->asuntoPQR }}</p>
@@ -57,9 +55,9 @@
                             	@endif
                             </td>
                             <td class="march">
-                               {{ $mensaje->created_at->diffForHumans() }} 
+                               {{ $mensaje->created_at->diffForHumans() }}
                             </td>
-                          
+
                             <td class="table-text">
                   							 <form action="{{route('leerMensaje')}}">
                   							 	<input type="hidden" name="idMensaje" value="{{$mensaje->id}}">
@@ -68,7 +66,7 @@
 							             </td>
                         </tr>
                        @endforeach
-                       @endif
+
                     </tbody>
                 </table>
                </div>
@@ -76,21 +74,19 @@
 </div>
 <div class="tab-pane text-style" id="tab2">
 	<div class="inbox-right">
-         	
+
             <div class="mailbox-content">
-               
+
                 <table class="table">
-                    	@if($nuevosCont == 0)
-                        <h2>No hay mensajes</h2>
-                      @else
+
                 			 <h1>Formulario de Contacto</h1>
-                		
+
                     <tbody>
-                    	
+
 
                     	@foreach($mensajesCont as $mensajeCont)
                         <tr class="table-row">
-                           
+
                             <td class="table-text">
                             	<h6> {{ $mensajeCont->nombreCont }}</h6>
                                 <p>{{ $mensajeCont->asuntoCont }}</p>
@@ -103,20 +99,20 @@
                             	@endif
                             </td>
                             <td class="march">
-                               {{ $mensajeCont->created_at->diffForHumans() }} 
+                               {{ $mensajeCont->created_at->diffForHumans() }}
                             </td>
-                          
+
                              <td class="table-text">
 							 <form action="{{ route('leerMsjContacto') }}">
 							 	<input type="hidden" name="idMensajeCont" value="{{$mensajeCont->id}}">
 							 	<button type="submit" class="btn btn-default">Leer</button>
 							 </form>
-							 
-                                
+
+
                             </td>
                         </tr>
                        @endforeach
-                       @endif
+                      
                     </tbody>
                 </table>
                </div>
@@ -128,14 +124,14 @@
 		$(document).ready(function() {
 			 var navoffeset=$(".header-main").offset().top;
 			 $(window).scroll(function(){
-				var scrollpos=$(window).scrollTop(); 
+				var scrollpos=$(window).scrollTop();
 				if(scrollpos >=navoffeset){
 					$(".header-main").addClass("fixed");
 				}else{
 					$(".header-main").removeClass("fixed");
 				}
 			 });
-			 
+
 		});
 		</script>
 		<!-- /script-for sticky-nav -->

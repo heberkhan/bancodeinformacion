@@ -18,10 +18,10 @@
         <div class="clearfix"></div>
     </div>
     <!--//four-grids here-->
-    
-<div class="agile-grids">	
+
+<div class="agile-grids">
 				<!-- tables -->
-				
+
 				<div class="agile-tables">
 					<div class="w3l-table-info">
                       <div class="panel-heading">
@@ -34,17 +34,17 @@
                             <!-- FIN BTN CREAR -->
                             <!-- BUSCADOR -->
                             <div class="col-md-6 form-group1 form-last">
-	                            	
+
 	                                <form method="GET" action="{{route('barrios.buscar')}}">
-	                                    
+
 	                                    <input type="text" placeholder="Buscar..." name="buscar">
-	                                </form>    
-	                           
+	                                </form>
+
                         	</div>
-                        	<div class="clearfix"></div>    
-                            <!-- FIN BUSCADOR -->   
-                      </div>  
-					  
+                        	<div class="clearfix"></div>
+                            <!-- FIN BUSCADOR -->
+                      </div>
+
 					    <table id="table">
 						<thead>
 						  <tr>
@@ -54,7 +54,7 @@
 							<th>UPZ</th>
 							<th>Editar</th>
 							<th>Borrar</th>
-							
+
 						  </tr>
 						</thead>
 						<tbody>
@@ -64,7 +64,7 @@
 							<td>{{$barrio->name}}</td>
 							<td>{{$barrio->zona}}</td>
 							<td>{{ $barrio->upz }}</td>
-							
+
 							<td><form action="{{ route('barrios.edit')}}">
 									<input type="hidden" name="id" value="{{$barrio->id}}">
 								 	<button type="submit" class="btn btn-primary">Editar</button>
@@ -76,15 +76,15 @@
 								 	<button type="submit" class="btn btn-default">Borrar</button>
 								</form>
 							</td>
-							
+
 						  </tr>
 						 @endforeach
 						</tbody>
 					  </table>
 					</div>
-				
-		
-				  
+				{!! $barrios->render() !!}
+
+
 
 				</div>
 				<!-- //tables -->

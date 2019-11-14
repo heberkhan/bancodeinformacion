@@ -35,28 +35,28 @@
 
                         <form action="{{ route('users.store') }}" enctype="multipart/form-data" method="POST" name="form1" id="form1">
                             {!! csrf_field() !!}
-                            
-                            
-                            <div class="vali-form">    
-                                <div class="col-md-6 form-group1">
-                                    <label class="control-label">Nombre de usuario</label>
-                                    <input type="text" placeholder="Nombre de Usuario" name="name" value="{{ old('name') }}">
-                                 </div>   
-                               
-                            
-                                <div class="col-md-6 form-group1 form-last">
-                                    <label class="control-label">Contraseña</label>
-                                    <input type="password" placeholder="Contraseña" name="pwd" >
-                                 </div>   
-                                 
-                            </div>
-                       
-                           
-                            
+
 
                             <div class="vali-form">
                                 <div class="col-md-6 form-group1">
-                                    <label class="control-label">Email</label>
+                                    <label class="control-label">Nombre de usuario<span class="text-danger">*</span></label>
+                                    <input type="text" placeholder="Nombre de Usuario" name="name" value="{{ old('name') }}">
+                                 </div>
+
+
+                                <div class="col-md-6 form-group1 form-last">
+                                    <label class="control-label">Contraseña<span class="text-danger">*</span></label>
+                                    <input type="password" placeholder="Contraseña" name="pwd" >
+                                 </div>
+
+                            </div>
+
+
+
+
+                            <div class="vali-form">
+                                <div class="col-md-6 form-group1">
+                                    <label class="control-label">Email<span class="text-danger">*</span></label>
                                     <input type="text" placeholder="Email" name="email" value="{{ old('email') }}">
                                 </div>
                                 <div class="vali-form form-last">
@@ -66,15 +66,15 @@
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            
 
-                           
 
-                           
-                            
+
+
+
+
                             <div class="col-md-12 form-group">
                                 <button type="submit" class="btn btn-primary">Registrar</button>
-                                <button type="reset" class="btn btn-default">Cancelar</button>
+                                <a href="{{URL::Previous()}}" class="btn btn-default">Volver</a>
                             </div>
                             <div class="clearfix"> </div>
                         </form>

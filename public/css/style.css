@@ -89,7 +89,7 @@ button#showLeftPush {
 	position: fixed;
 }
 .cbp-spmenu-vertical {
-    width: 309px;
+    width: 250px;
     height: 100%;
     top: 76px;
     background-color: #2a2f43;
@@ -297,7 +297,7 @@ i.fa.fa-tasks{
 }
 /* ----Logo---- #0B610B*/
 .logo {
-    background: #2ECCFA;
+    background: #fff;
     text-align: center;
     float: left;
 }

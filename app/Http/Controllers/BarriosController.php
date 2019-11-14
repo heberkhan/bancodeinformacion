@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Barrios;
 use App\Comercio;
 use Illuminate\Http\Request;
+use App\Http\Requests\Barrio;
 
 class BarriosController extends Controller
 {
@@ -35,16 +36,11 @@ class BarriosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Barrio $request)
     {
-        $barrio = new Barrios();
-        $barrio->name = $request->name;
-        $barrio->zona = $request->zona;
-        $barrio->upz  = $request->upz;   
-        $barrio->save();
-
+        $barrio = Barrios::create($request->all());
         session()->flash('mensaje', 'Barrio creado con éxito!');
-        return view('barrios.create');
+        return redirect()->route('barrios.index');
     }
 
     /**
@@ -87,13 +83,13 @@ class BarriosController extends Controller
         if ($request->zona) {
             $barrio->zona = $request->zona;
         }
-        
+
         if ($request->upz) {
             $barrio->upz = $request->upz;
         }
-        
-        
-        
+
+
+
         $barrio->update();
 
         session()->flash('mensaje', 'Barrio actualizado con éxito!');
@@ -122,7 +118,7 @@ class BarriosController extends Controller
             $barrios = Barrios::orderBy('id', 'DESC')
             ->Search($nombre)
             ->paginate(20);
-            
+
             if (!$barrios) {
                 session()->flash('mensaje', 'No se encontraron resultados');
                 return redirect()->route('barrios.index');

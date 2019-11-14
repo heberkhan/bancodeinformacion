@@ -33,44 +33,44 @@
                     <div class="validation-form">
                         <!---->
 
-                        <form action="{{ route('barrios.store') }}" enctype="multipart/form-data" method="get" name="form1" id="form1">
+                        <form action="{{ route('barrios.store') }}" enctype="multipart/form-data" method="post" name="form1" id="form1">
                             {!! csrf_field() !!}
-                            
-                            
-                            <div class="vali-form">    
+
+
+                            <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">Nombre del barrio</label>
-                                    <input type="text" placeholder="Nombre del barrio" name="name" value="{{ old('name') }}">
-                                 </div>   
-                               
-                            
+                                    <input type="text" placeholder="Nombre del barrio" name="name" value="{{ old('name') }}" >
+                                 </div>
+
+
                                 <div class="col-md-6 form-group1 form-last">
                                     <label class="control-label">Zona</label>
-                                    <input type="text" placeholder="Zona" name="zona" value="{{ old('zona') }}">
-                                 </div>   
-                                 
+                                    <input type="text" placeholder="Zona" name="zona" value="{{ old('zona') }}" >
+                                 </div>
+
                             </div>
-                       
-                           
-                            
+
+
+
 
                             <div class="vali-form">
                                 <div class="col-md-6 form-group1">
                                     <label class="control-label">UPZ</label>
-                                    <input type="text" placeholder="UPZ" name="upz" value="{{ old('upz') }}">
+                                    <input type="text" placeholder="UPZ" name="upz" value="{{ old('upz') }}" >
                                 </div>
-                                
+
                                 <div class="clearfix"> </div>
                             </div>
-                            
 
-                           
 
-                           
-                            
+
+
+
+
                             <div class="col-md-12 form-group">
                                 <button type="submit" class="btn btn-primary">Crear</button>
-                                <button type="reset" class="btn btn-default">Cancelar</button>
+                                <a href="{{route('barrios.index')}}" class="btn btn-default">Volver</a>
                             </div>
                             <div class="clearfix"> </div>
                         </form>

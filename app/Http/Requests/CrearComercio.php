@@ -24,16 +24,22 @@ class CrearComercio extends FormRequest
     public function rules()
     {
         return [
-            
-            'nombreEstablecimiento'    => 'unique:comercios,nombre|max:255',
+
+            'nombre'    => 'unique:comercios,nombre|max:255',
+            'nit' => 'unique:comercios',
             'email'     => 'email',
-            'logo'      => 'image',
-            'facebook'  => 'url',
-            'twitter'   => 'url',
-            'instagram' => 'url',
-            'url'       => 'url',
-            'lat'       => 'numeric',
-            'long'      => 'numeric',
+            'logo'      => 'image|dimensions:min_width=300,min_height=300,max_width=1000,max_height=1000',
+
+
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'nombre.unique' => 'El Comercio ya se encuentra registrado.',
+            'nit.unique' => 'El Comercio ya se encuentra registrado.',
+            'logo.image' => 'Por favor adjunte un formato válido de imagen (jpeg, png, bmp, gif, o svg).',
 
         ];
     }

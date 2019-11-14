@@ -18,10 +18,10 @@
         <div class="clearfix"></div>
     </div>
     <!--//four-grids here-->
-    
-<div class="agile-grids">	
+
+<div class="agile-grids">
 				<!-- tables -->
-				
+
 				<div class="agile-tables">
 					<div class="w3l-table-info">
                       <div class="panel-heading">
@@ -34,19 +34,19 @@
 	                            <!-- FIN BTN CREAR -->
 	                            <!-- BUSCADOR -->
 	                            <div class="col-md-6 form-group1 form-last">
-		                            	
-		                                <form method="GET" action="{{route('users.buscar')}}">
-		                                    
-		                                    <input type="text" placeholder="Buscar por email" name="buscar">
-		                                </form>    
-		                           
-	                        	</div>
-	                        	<div class="clearfix"></div>    
-	                            <!-- FIN BUSCADOR -->   
-	                      	</div>  
 
-                      </div>  
-					  
+		                                <form method="GET" action="{{route('users.buscar')}}">
+
+		                                    <input type="text" placeholder="Buscar por email" name="buscar">
+		                                </form>
+
+	                        	</div>
+	                        	<div class="clearfix"></div>
+	                            <!-- FIN BUSCADOR -->
+	                      	</div>
+
+                      </div>
+
 					    <table id="table">
 						<thead>
 						  <tr>
@@ -55,16 +55,17 @@
 							<th>Email</th>
 							<th>Editar</th>
 							<th>Borrar</th>
-							
+
 						  </tr>
 						</thead>
 						<tbody>
 						  @foreach($users as $user)
+              @if($user->id != '1')
 						  <tr>
 						  	<td>{{$user->id}}</td>
 							<td>{{$user->name}}</td>
 							<td>{{$user->email}}</td>
-							
+
 							<td><form action="{{ route('users.edit')}}">
 									<input type="hidden" name="id" value="{{$user->id}}">
 								 	<button type="submit" class="btn btn-primary">Editar</button>
@@ -76,15 +77,16 @@
 								 	<button type="submit" class="btn btn-default">Borrar</button>
 								</form>
 							</td>
-							
+
 						  </tr>
+              @endif
 						 @endforeach
 						</tbody>
 					  </table>
 					</div>
-				
-		
-				  
+				{!! $users->render() !!}
+
+
 
 				</div>
 				<!-- //tables -->
